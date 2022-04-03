@@ -146,6 +146,7 @@ hr.line-footer {
     height: 100%;
     position: absolute;
     top: 0;
+    z-index: 3;
 }
 
 .vignance::before {
@@ -276,6 +277,11 @@ hr.line-footer {
     }
     .spacer-footer {
         margin-top: 150px;
+    }
+
+    .vignance::before,
+    .vignance::after {
+        width: 30%;
     }
 }
 
