@@ -70,12 +70,20 @@ a { color: inherit !important; }
     color: #FFFFFF;
 }
 
+.btn-dolven:hover {
+    color: #FF3C96;
+}
+
 .btn-dolven-pink {
     padding: 20px 50px;
     border: none;
     border-radius: 15px;
     background: #FF3C96;
     color: #FFFFFF;
+}
+
+.btn-dolven-pink:hover {
+    background: #da2b7c;
 }
 
 .hero-pattern::before {
