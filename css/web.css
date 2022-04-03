@@ -38,6 +38,8 @@ a { color: inherit !important; }
     left: 0;
     right: 0;
     padding: 0;
+    z-index: 1000;
+    overflow-y: auto;
 }
 .nav {
     background: #1a1a1a;
@@ -136,13 +138,40 @@ hr.line-footer {
 }
 
 .vignance::before {
-    background: linear-gradient(90deg, #121212 0%, rgba(18, 18, 18, 0) 100%);
+    background: linear-gradient(90deg, #0d0d0d 0%, rgba(18, 18, 18, 0) 100%);
     left: 0;
 }
 
 .vignance::after {
-    background: linear-gradient(90deg, rgba(18, 18, 18, 0) 0%, #121212 100%);
+    background: linear-gradient(90deg, rgba(18, 18, 18, 0) 0%, #0d0d0d 100%);
     right: 0;
+}
+
+.text-hr {
+    display: inline-block;
+}
+
+.text-hr::after {
+    position: absolute;
+    content: "";
+    background: #FF3C96;
+    height: 10px;
+    width: 100%;
+    bottom: 15px;
+    left: 0;
+    z-index: -1;
+}
+
+.disc-image {
+    position: relative;
+}
+
+.disc-image::after {
+    position: absolute;
+    content: url("data:image/svg+xml,%3Csvg width='100%' viewBox='0 0 506 121' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.15' d='M504.508 1.62V78.9131C504.508 101.557 486.152 119.913 463.508 119.913H1.61453' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    width: 300px;
+    top: 95%;
+    right: 50%;
 }
 
 /* `sm` applies to small devices (landscape phones, less than 576px) */
@@ -157,7 +186,35 @@ hr.line-footer {
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (min-width: 992px) {
-    
+    .nav-outline {
+        position: relative;
+    }
+    .nav {
+        background: transparent;
+        display: inline-block;
+        margin-top: 0px;
+        padding: 0;
+    }
+    .nav li {
+        display: inline-block;
+        width: auto;
+        padding: 0 5px;
+    }
+    .text-kerning-lg {
+        line-height: 110%;
+        letter-spacing: -0.03em;
+    }
+    .text-hr::after {
+        height: 6px;
+        bottom: 8px;
+    }
+    .spacer-footer {
+        margin-top: 100px;
+    }
+
+    .btn-dolven-pink {
+        padding: 20px 24px;
+    }
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
