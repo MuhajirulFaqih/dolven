@@ -118,9 +118,12 @@ a { color: inherit !important; }
     filter: blur(25px);
 }
 
+hr {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
 hr.line-footer {
-    opacity: 0.25;
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25) !important;
     margin: 0;
 }
 
