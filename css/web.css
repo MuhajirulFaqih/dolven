@@ -186,6 +186,16 @@ hr.line-footer {
     right: 50%;
 }
 
+.bg-galaxy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
 /* `sm` applies to small devices (landscape phones, less than 576px) */
 @media (min-width: 576px) {
    
